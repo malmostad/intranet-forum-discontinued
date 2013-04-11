@@ -1,4 +1,5 @@
-intranet-forum
+Intranet-forum
 ==============
 
-Drupal based intranet forum
+City of Malmo’s Drupal based intranet forum.
+
