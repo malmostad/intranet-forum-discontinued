@@ -5,7 +5,7 @@ This is the Drupal theme used for Malmö Stad intranet komin forum. The theme is
 
 # Assets config
 
-Rename file config/assets-config.example.inc to config/assets-config.inc and change configurations.
+Copy config/assets-config.example.inc into config/assets-config.inc and change configurations.
 
 # Stylesheets
 
