@@ -7,6 +7,10 @@ This is the Drupal theme used for Malmö Stad intranet komin forum. The theme is
 
 Copy config/assets-config.example.inc into config/assets-config.inc and change configurations.
 
+# Dependencies
+
+* Module malmo_forum - sites/all/modules/custom/malmo_forum
+
 # Stylesheets
 
 Stylesheets are written using SASS.
