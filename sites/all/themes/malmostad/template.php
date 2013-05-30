@@ -5,7 +5,9 @@
  */
 
 // Theme helper functions
-include_once './' . drupal_get_path('theme', 'malmostad') . '/functions/theme-helper-functions.inc';
+require_once './' . drupal_get_path('theme', 'malmostad') . '/functions/theme-helper-functions.inc';
+
+
 
 /**
  * Preprocesses the wrapping HTML.
@@ -14,8 +16,11 @@ include_once './' . drupal_get_path('theme', 'malmostad') . '/functions/theme-he
  *   Template variables.
  */
 function malmostad_preprocess_html(&$vars) {
+  // Assets config
+  require_once './' . drupal_get_path('theme', 'malmostad') . '/config/assets-config.inc';
+  
   // Determine asset url based on environment
-  $assets_url = malmostad_localenv() && theme_get_setting('testenv_assets')=='local' ? "//" . theme_get_setting('assetsurl_local') : "//" . theme_get_setting('assetsurl_prod');
+  $assets_url = malmostad_localenv( $assets_config ) && $assets_config['testenv_assets']=='local' ? "//" . $assets_config['assetsurl_local'] : "//" . $assets_config['assetsurl_prod'];
   
   // Include assets-3.0 resources as specified in asset documentation
 

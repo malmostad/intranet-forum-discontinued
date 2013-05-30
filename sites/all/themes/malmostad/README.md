@@ -3,9 +3,9 @@ Malmö Stad Theme
 
 This is the Drupal theme used for Malmö Stad intranet komin forum. The theme is based on Malmö stad assets-3.0: https://github.com/malmostad/intranet-assets
 
-# Assets 
+# Assets config
 
-Assets configurations are made in the malmostad.info file
+Rename file config/assets-config.example.inc to config/assets-config.inc and change configurations.
 
 # Stylesheets
 

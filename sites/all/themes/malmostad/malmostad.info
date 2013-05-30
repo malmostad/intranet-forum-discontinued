@@ -21,21 +21,6 @@ regions[footer]               = Footer
 stylesheets[all][] = styles/master.css
 
 
-;; Malmö stad assets ;;
-
-; Your local fully qualified domain name
-settings[domainname_local] = www.local.malmo.se
-
-; Your local development assets url
-settings[assetsurl_local] = www.local.malmo.se:3001/assets
-
-; Malmö stad assets url
-settings[assetsurl_prod] = webapps06.malmo.se/assets-3.0
-
-; Which assets to use in your test environment, "local" or "prod"
-settings[testenv_assets] = prod
-
-
 ;; Advanced forum ;;
 
 ; Setting our forum style directory, so that advanced forum can find it

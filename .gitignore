@@ -35,3 +35,6 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+# Malmö stad
+sites/all/themes/malmostad/config/assets-config.inc
