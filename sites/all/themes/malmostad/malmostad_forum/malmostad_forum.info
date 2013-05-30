@@ -1,0 +1,8 @@
+; This is a theme plugin for the 'Advanced forum'. For instructions on how to style an 
+; 'Advanced forum' style plugin, see http://drupal.org/node/512116
+
+name = Malmö Stad Forum
+description = A theme plugin for Advanced Forum, based on Malmö Stad assets
+version = 2.x
+base style = naked
+

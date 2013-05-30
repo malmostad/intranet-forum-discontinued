@@ -1,0 +1,42 @@
+;; Info ;;
+
+name = Malmö Stad
+description = Theme for Malmö town komin forum
+core = 7.x
+
+
+;; Regions ;;
+
+regions[header]               = Header
+regions[highlighted]          = Highlighted content
+regions[help]          				= Content help section
+regions[content]              = Content
+regions[sidebar_first]        = First sidebar
+regions[sidebar_second]       = Second sidebar
+regions[footer]               = Footer
+
+
+;; Styles ;;
+
+stylesheets[all][] = styles/master.css
+
+
+;; Malmö stad assets ;;
+
+; Your local fully qualified domain name
+settings[domainname_local] = www.local.malmo.se
+
+; Your local development assets url
+settings[assetsurl_local] = www.local.malmo.se:3001/assets
+
+; Malmö stad assets url
+settings[assetsurl_prod] = webapps06.malmo.se/assets-3.0
+
+; Which assets to use in your test environment, "local" or "prod"
+settings[testenv_assets] = prod
+
+
+;; Advanced forum ;;
+
+; Setting our forum style directory, so that advanced forum can find it
+plugins[advanced_forum][styles] = 'malmostad_forum'
