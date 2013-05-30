@@ -1,0 +1,9 @@
+
+name = Malmö Stad Forum
+description = Support module for the Advanced forum and Malmö Stad theme
+dependencies[] = advanced_forum
+package = Malmö Stad
+core = 7.x
+
+
+

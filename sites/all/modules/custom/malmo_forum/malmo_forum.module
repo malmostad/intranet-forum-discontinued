@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Support module for Malmö Stad forum
+ */
+
+require_once( drupal_get_path('theme', 'malmostad') . "/block/block-content-functions.inc" );
+
+/**
+ * Implementation of hook_block_info().
+ */
+function malmo_forum_block_info() {    
+  $blocks['forum_footer_nav'] = array(
+    'info' => t('Forum footer navigation'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view().
+ */
+function malmo_forum_block_view($delta = '') {
+	$block = '';
+  switch ($delta) {
+    case 'forum_footer_nav':
+    	$block['subject'] = '';
+      $block['content'] = malmo_forum_footer_nav();
+      break;
+  }
+
+  return $block;
+}
+
+
