@@ -38,3 +38,4 @@ xmlrpc.php
 
 # Malmö stad
 sites/all/themes/malmostad/config/assets-config.inc
+sites/all/themes/malmostad/malmostad_forum/.sass-cache
