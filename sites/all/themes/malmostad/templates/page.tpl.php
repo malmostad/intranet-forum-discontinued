@@ -122,8 +122,7 @@
     <?php print $messages; ?>
 
     <div id="main-wrapper"><div id="main" class="clearfix">
-
-      <div id="content" class="column"><div class="section">
+      <div id="content" class="column"><section class="body-copy">
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -134,7 +133,7 @@
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
-      </div></div> <!-- /.section, /#content -->
+      </section></div> <!-- /.section, /#content -->
 
       <?php if ($page['sidebar_first']): ?>
         <div id="sidebar-first" class="column sidebar"><div class="section">
