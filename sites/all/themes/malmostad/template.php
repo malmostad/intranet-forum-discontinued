@@ -105,11 +105,7 @@ function malmostad_advanced_forum_node_type_create_list(&$variables) {
       $output .= theme('advanced_forum_l', array(
         'text' => t('New @node_type', array('@node_type' => $item['name'])),
         'path' => $item['href'],
-        'options' => array( 
-          'attributes' => array( 
-            'class' => array( 'myclass' ) 
-            ) 
-          )
+        'options' => NULL
         ));
       $output .= '</button>';
     }
