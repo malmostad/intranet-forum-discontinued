@@ -8,6 +8,10 @@
 require_once './' . drupal_get_path('theme', 'malmostad') . '/functions/theme-helper-functions.inc';
 
 
+/********************************
+ *        ASSETS
+ **/
+
 
 /**
  * Preprocesses the wrapping HTML.
@@ -76,4 +80,45 @@ function malmostad_preprocess_html(&$vars) {
 
 function malmostad_preprocess_region(&$variables) {
   // TODO - Remove class bigfoot from region template
+}
+
+
+
+/********************************
+ *        ADVANCED FORUM
+ **/
+
+
+/**
+ * Overriding advanced forum theme function to show list of types that can be posted in forum.
+ */
+function malmostad_advanced_forum_node_type_create_list(&$variables) {
+  $forum_id = $variables['forum_id'];
+
+  // Get the list of node types to display links for.
+  $type_list = advanced_forum_node_type_create_list($forum_id);
+
+  $output = '';
+  if (is_array($type_list)) {
+    foreach ($type_list as $type => $item) {
+      $output .= '<button class="btn">';
+      $output .= theme('advanced_forum_l', array(
+        'text' => t('New @node_type', array('@node_type' => $item['name'])),
+        'path' => $item['href'],
+        'options' => array( 
+          'attributes' => array( 
+            'class' => array( 'myclass' ) 
+            ) 
+          )
+        ));
+      $output .= '</button>';
+    }
+  }
+  else {
+    // User did not have access to create any node types in this fourm so
+    // we just return the denial text / login prompt.
+    $output = $type_list;
+  }
+
+  return $output;
 }
