@@ -118,3 +118,24 @@ function malmostad_advanced_forum_node_type_create_list(&$variables) {
 
   return $output;
 }
+
+
+/**
+ * Returns HTML for a breadcrumb trail.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - breadcrumb: An array containing the breadcrumb links.
+ */
+function malmostad_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+
+  if (!empty($breadcrumb)) {
+    // Provide a navigational heading to give context for breadcrumb links to
+    // screen-reader users. Make the heading invisible with .element-invisible.
+    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+
+    $output .= '<div class="breadcrumb">' . implode('<span class="icon-angle-right icon-large"></span>', $breadcrumb) . '</div>';
+    return $output;
+  }
+}
