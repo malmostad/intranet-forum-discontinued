@@ -1,0 +1,11 @@
+name = Forum admin
+description = Permissions for the forum admin role
+core = 7.x
+package = Malmostad
+dependencies[] = features
+features[features_api][] = api:2
+features[user_permission][] = administer advanced forum
+features[user_permission][] = administer forums
+features[user_role][] = forum admin
+features_exclude[dependencies][advanced_forum] = advanced_forum
+features_exclude[dependencies][forum] = forum
