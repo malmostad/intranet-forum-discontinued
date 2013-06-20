@@ -17,7 +17,7 @@ function theme_asset_button_link( $vars ) {
             	$text . 
             '</button>';
   $options = array( 'html' => true );
-  $output .= l( $button, $url, $options );
+  $output = l( $button, $url, $options );
 
   return $output;
 }
