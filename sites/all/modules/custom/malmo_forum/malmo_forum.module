@@ -34,3 +34,19 @@ function malmo_forum_block_view($delta = '') {
 }
 
 
+/**
+ * Implementation of hook_menu_alter().
+ */
+function malmo_forum_menu_alter(&$items) {
+  
+  // Page add/edit container only available to super admin 
+  $items['admin/structure/forum/add/container']['access arguments'] = array('access administration pages');
+  $items['admin/structure/forum/edit/container/%taxonomy_term'] = array('access administration pages'); 
+
+  // Place add forum as tab menu
+  $items['admin/structure/forum/add/forum']['type'] = MENU_LOCAL_TASK;
+
+  // Remove settings from tab menu
+  $items['admin/structure/forum/settings']['type'] = MENU_NORMAL_ITEM;
+}
+
