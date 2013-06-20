@@ -50,3 +50,14 @@ function malmo_forum_menu_alter(&$items) {
   $items['admin/structure/forum/settings']['type'] = MENU_NORMAL_ITEM;
 }
 
+
+/**
+ * Implementation of hook_theme().
+ */
+function malmo_forum_theme() {
+    return array(
+        'asset_button_link' => array(
+            'render element' => 'element',
+        ),
+    );
+}

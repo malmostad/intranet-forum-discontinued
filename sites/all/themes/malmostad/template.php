@@ -6,6 +6,7 @@
 
 // Theme helper functions
 require_once './' . drupal_get_path('theme', 'malmostad') . '/functions/theme-helper-functions.inc';
+require_once './' . drupal_get_path('theme', 'malmostad') . '/includes/theme.inc';
 
 
 /********************************
@@ -83,7 +84,6 @@ function malmostad_preprocess_region(&$variables) {
 }
 
 
-
 /********************************
  *        ADVANCED FORUM
  **/
@@ -101,13 +101,12 @@ function malmostad_advanced_forum_node_type_create_list(&$variables) {
   $output = '';
   if (is_array($type_list)) {
     foreach ($type_list as $type => $item) {
-      $output .= '<button class="btn">';
-      $output .= theme('advanced_forum_l', array(
-        'text' => t('New @node_type', array('@node_type' => $item['name'])),
-        'path' => $item['href'],
-        'options' => NULL
-        ));
-      $output .= '</button>';
+      $output = theme( 'asset_button_link',
+                        array( 
+                          "url" => $item['href'],
+                          "text" => t('New @node_type', array('@node_type' => $item['name']))
+                        )
+                      );
     }
   }
   else {
