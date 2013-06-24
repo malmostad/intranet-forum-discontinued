@@ -8,4 +8,7 @@
 }
 
 @media ( max-width: 28em ) {
+  .forum-last-post, .forum-last-reply {
+    display:none;
+  }
 }
