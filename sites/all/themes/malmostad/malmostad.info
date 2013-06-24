@@ -18,7 +18,7 @@ regions[footer]               = Footer
 
 ;; Styles ;;
 
-stylesheets[all][] = styles/master.css
+stylesheets[all][] = stylesheets/application.css
 
 
 ;; Advanced forum ;;
