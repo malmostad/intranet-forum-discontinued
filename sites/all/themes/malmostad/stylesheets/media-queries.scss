@@ -2,29 +2,57 @@
 }
 
 @media ( max-width: 34em ) {
-  .forum-header {
-    .forum-topics, .forum-number-topics, .forum-posts, .forum-number-posts {
-      display:none;
+  #forum {
+    thead {
+      .forum-topics,  .forum-posts  {
+        display:none;
+      }
+    }
+    tbody {
+      .forum-number-topics, .forum-number-posts {
+        display:none;
+      }
     }
   }
 
   #forum-topic-list {
-    .views-field-comment-count, .views-field-number-comment-count {
-      display:none;
+    thead {
+      .views-field-comment-count {
+        display:none;
+      }
+    }
+    tbody {
+      .views-field-number-comment-count {
+        display:none;
+      }
     }
   }
 }
 
 @media ( max-width: 28em ) {
-  .forum-header {
-    .forum-last-post, .forum-last-reply {
-      display:none;
+   #forum {
+    thead {
+      .forum-last-post  {
+        display:none;
+      }
+    }
+    tbody {
+      .forum-last-reply {
+        display:none;
+      }
     }
   }
 
   #forum-topic-list {
-    .views-field-last-updated, .views-field-number-last-updated {
-      display:none;
+    thead {
+      .views-field-last-updated {
+        display:none;
+      }
+    }
+    tbody {
+      .views-field-number-last-updated {
+        display:none;
+      }
     }
   }
 }
