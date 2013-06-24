@@ -2,13 +2,17 @@
 }
 
 @media ( max-width: 34em ) {
-  .forum-topics, .forum-number-topics, .forum-posts, .forum-number-posts {
-    display:none;
+  .forum-header {
+    .forum-topics, .forum-number-topics, .forum-posts, .forum-number-posts {
+      display:none;
+    }
   }
 }
 
 @media ( max-width: 28em ) {
-  .forum-last-post, .forum-last-reply {
-    display:none;
+  .forum-header {
+    .forum-last-post, .forum-last-reply {
+      display:none;
+    }
   }
 }
