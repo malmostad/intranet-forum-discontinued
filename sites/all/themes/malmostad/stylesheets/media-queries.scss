@@ -7,11 +7,23 @@
       display:none;
     }
   }
+
+  #forum-topic-list {
+    .views-field-comment-count, .views-field-number-comment-count {
+      display:none;
+    }
+  }
 }
 
 @media ( max-width: 28em ) {
   .forum-header {
     .forum-last-post, .forum-last-reply {
+      display:none;
+    }
+  }
+
+  #forum-topic-list {
+    .views-field-last-updated, .views-field-number-last-updated {
       display:none;
     }
   }
