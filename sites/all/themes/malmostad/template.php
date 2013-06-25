@@ -138,3 +138,28 @@ function malmostad_breadcrumb($variables) {
     return $output;
   }
 }
+
+/**
+ * Preprocess function for topic list template - advanced-forum-topic-list-view.tpl.php
+ */
+function malmostad_preprocess_advanced_forum_topic_list_view(&$variables) {
+  
+  // Remove topic icon and show new topics with bold font
+  foreach( $variables['rows'] as $count => $row ) {
+    $topic_icon_html = $row['topic_icon'];
+    
+    // Use topic icon class to determine new topics
+    $DOM = new DOMDocument;
+    $DOM->loadHTML($topic_icon_html);
+    $items = $DOM->getElementsByTagName('span');
+    $icon_class = $items->item(0)->getAttribute('class');
+
+    // Show new topics with bold font
+    if( mb_ereg_match(".*topic-icon-new.*", $icon_class ) ) {
+      $variables['rows'][$count]['title'] = "<b>" . $variables['rows'][$count]['title'] . "</b>";
+    } 
+
+    // Remove topic icon
+    $variables['rows'][$count]['topic_icon'] = '';
+  }
+}
