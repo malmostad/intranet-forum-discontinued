@@ -156,7 +156,7 @@ function malmostad_preprocess_advanced_forum_topic_list_view(&$variables) {
 
     // Show new topics with bold font
     if( mb_ereg_match(".*topic-icon-new.*", $icon_class ) ) {
-      $variables['rows'][$count]['title'] = "<b>" . $variables['rows'][$count]['title'] . "</b>";
+      $variables['rows'][$count]['title'] = "<strong>" . $variables['rows'][$count]['title'] . "</strong>";
     } 
 
     // Remove topic icon
