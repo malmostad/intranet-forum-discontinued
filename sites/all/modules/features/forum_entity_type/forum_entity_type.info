@@ -1,0 +1,10 @@
+name = Forum entity type
+description = Settings for the forum entity type 
+core = 7.x
+package = Malmostad
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[field_base][] = field_usertags
+features[field_instance][] = node-forum-field_usertags
+features[taxonomy][] = tags
