@@ -16,6 +16,8 @@ City of Malmo’s Drupal based intranet forum.
 
 * Install Drupal 7
 * Download and enable dependency modules
+* Replace sites folder with sites folder in this repo
+* Enable Malmö stad custom modules and themes
 * Enable all features
 
 # License
