@@ -4,9 +4,19 @@ City of Malmo’s Drupal based intranet forum.
 
 ## Dependencies
 * MySQL
-* LDAP or a SAML 2.0 IdP for authentication
 * Assets from an [asset host](https://github.com/malmostad/intranet-assets)
-* TODO: complete list
+
+# Modules
+
+* [Advanced Forum Module](http://drupal.org/project/advanced_forum)
+* [Chaos Tools Suite](https://drupal.org/project/ctools)
+* [ThemeKey](https://drupal.org/project/themekey)
+
+## Installation
+
+* Install Drupal 7
+* Download and enable dependency modules
+* Enable all features
 
 ## License
 Released under AGPL version 3.
