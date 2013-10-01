@@ -1,0 +1,13 @@
+Copyright
+=========
+
+This module is a fork of the module found here https://github.com/onelogin/drupal-saml/tree/master
+
+Please see file LICENSE for copyrights.
+
+
+Installation
+============
+
+Rename config.example.php to config.php and update.
+
