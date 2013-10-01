@@ -1,5 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
+sites/all/modules/custom/onelogin_saml/config.php
 
 # Ignore paths that contain generated content.
 cache/
